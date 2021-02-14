@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Hospital_Management.Models.Department>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+
+    @foreach (var dept in Model)
+    {
+        @Html.Partial("_DepartmentCard",dept);
+    }
+
+</div>

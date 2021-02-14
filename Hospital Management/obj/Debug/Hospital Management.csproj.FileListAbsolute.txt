@@ -1,0 +1,94 @@
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Hospital Management.dll.config
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Hospital Management.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Hospital Management.pdb
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\csc.exe
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\csc.exe.config
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\csc.rsp
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\csi.exe
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\csi.rsp
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.AppContext.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\vbc.exe
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\vbc.exe.config
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\vbc.rsp
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Antlr3.Runtime.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\EntityFramework.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\EntityFramework.SqlServer.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Newtonsoft.Json.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Owin.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Helpers.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Mvc.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Optimization.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Razor.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.Razor.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\WebGrease.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\EntityFramework.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\EntityFramework.SqlServer.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Helpers.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Mvc.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Optimization.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.Razor.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\System.Web.WebPages.Razor.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Newtonsoft.Json.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Antlr3.Runtime.pdb
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.Initial.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddImageToDoctor.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RetypePhoneNumber.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.MakeTreatmentIdAsNullable.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.GenerateResource.cache
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.CoreCompileInputs.cache
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.CopyComplete
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.dll
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.pdb
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csprojAssemblyReference.cache
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveDescriptionFromDept.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment1.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddImageToDepartment.resources

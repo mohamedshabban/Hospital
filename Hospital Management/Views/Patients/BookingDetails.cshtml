@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "BookingDetails";
+}
+
+<h2>Booking Details</h2>
+@model Hospital_Management.Models.Patient
+
+<h3>Your ID is <mark>@Model.Id</mark> to get your result after Recovery</h3>
+
+<p>
+    @Html.ActionLink("Back", 
+        "Index", "Home",
+        null, new { @class = "btn btn-primary" })
+</p>

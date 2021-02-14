@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "ResultDetails";
+}
+@model Hospital_Management.Models.Patient
+@if (Model.Result == null)
+{
+    <p>there is no result</p>
+}
+else
+{
+    <h4>Your Result is  @Model.Result</h4> 
+}

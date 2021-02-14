@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Web.Mvc.Html
+@using Hospital_Management.Models
+@model Hospital_Management.ViewModels.RegisterPatientViewModel
+
+<h2>Registeration Form</h2>
+
+@using (Html.BeginForm("Register", "Patients"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(c => c.Patient.Name)
+        @Html.TextBoxFor(c => c.Patient.Name,
+            new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Patient.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Patient.DepartmentId)
+        @Html.DropDownListFor(c => c.Patient.DepartmentId, new SelectList(Model.Departments, "Id", "Name"), "Select Department", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Patient.DepartmentId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Patient.Age)
+        @Html.TextBoxFor(c => c.Patient.Age, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Patient.Age)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Patient.Mobile)
+        @Html.EditorFor(c => c.Patient.Mobile, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Patient.Mobile)
+    </div>
+
+    @Html.HiddenFor(c => c.Patient.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+    {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+

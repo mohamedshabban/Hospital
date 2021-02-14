@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+}
+@model Hospital_Management.Models.Patient
+
+<p>Enter Your ID</p>
+@using(Html.BeginForm("ResultDetails", "Patients", FormMethod.Get)) {
+    @Html.TextBox("id")
+    <input type = "submit" value="Search"/>
+}
