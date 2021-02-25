@@ -4,8 +4,25 @@
         <img src="@Model.Image" alt="" >
         <div class="caption">
             <h3>
-                @Html.ActionLink(@Model.Name, "Details","Departments", new { id = Model.Id },null)
+                @Html.ActionLink(@Model.Name, "Details", "Departments", new { id = Model.Id }, null)
             </h3>
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Admins"))
+                {
+                    <p>
+                        @Html.ActionLink("Edit",
+                            "Edit", 
+                            "Departments", new { id = Model.Id }, null)
+                    </p>
+                    <p>
+                        @Html.ActionLink("Delete",
+                            "Delete", 
+                            "Departments", new { id = Model.Id }, null)
+                    </p>
+                }
+            }
+            
             <p>@Model.ShortDescription</p>
         </div>
     </div>

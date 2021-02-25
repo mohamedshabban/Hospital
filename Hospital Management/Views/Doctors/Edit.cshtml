@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>DoctorCreate</h4>
         <hr />
@@ -37,7 +37,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", "Doctors", "", new { @class = "btn btn-primary" })
 </div>
 
 @section Scripts {

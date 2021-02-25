@@ -35,22 +35,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DepartmentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DepartmentId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TreatmentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TreatmentId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Result)
         </dt>
 
@@ -61,6 +45,8 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit","Patients", new { id = Model.Id }, new { @class = "btn btn-default" })
 </p>
+<div>
+    @Html.ActionLink("Back to List", "Index", "Patients", "", new { @class = "btn btn-primary" })
+</div>

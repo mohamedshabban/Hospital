@@ -1,5 +1,4 @@
-﻿@using System.Collections
-@model Hospital_Management.ViewModels.DoctorCreate
+﻿@model Hospital_Management.ViewModels.ListDoctorsViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -7,43 +6,31 @@
 
 <h2>Create</h2>
 
-
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-<div class="form-horizontal">
-    <h4>DoctorCreate</h4>
-    <hr />
+    <div class="form-horizontal">
+        <h4>Doctor</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Doctor.Name)
+            @Html.EditorFor(model => model.Doctor.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Doctor.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Doctor.DepartmentId)
+            @Html.DropDownListFor(c => c.Doctor.DepartmentId, new SelectList(Model.Departments, "Id", "Name"), "Select Department", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Doctor.DepartmentId)
+        </div>
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-    <div class="form-group">
-        @Html.LabelFor(c => c.Doctor.Name)
-        @Html.TextBoxFor(c => c.Doctor.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Doctor.Name)
-    </div>
-
-
-    <div class="form-group">
-        @Html.LabelFor(c => c.Doctor.DepartmentId)
-        @Html.DropDownListFor(c => c.Doctor.DepartmentId, new SelectList(Model.Departments, "Id", "Name"), "Select Doctor Department", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Doctor.DepartmentId)
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="form-group">
             <input type="submit" value="Create" class="btn btn-default" />
         </div>
     </div>
-
-</div>
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

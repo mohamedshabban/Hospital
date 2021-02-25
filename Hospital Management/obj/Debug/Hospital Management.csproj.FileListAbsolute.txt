@@ -82,13 +82,23 @@ C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospi
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddImageToDoctor.resources
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RetypePhoneNumber.resources
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.MakeTreatmentIdAsNullable.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveDescriptionFromDept.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment1.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddImageToDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.IdentityAddedToPatient.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveIdentityFromDoctor.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.IdentityAddedToPatientEdited.resources
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.GenerateResource.cache
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.CoreCompileInputs.cache
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csproj.CopyComplete
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.dll
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.pdb
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital Management.csprojAssemblyReference.cache
-C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment.resources
-C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveDescriptionFromDept.resources
-C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddDescriptionToDepartment1.resources
-C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AddImageToDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AnotationToNameDoctor.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.AnotationToDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveTreatmentsTable.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveTreatmentsTable1.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.ManyToManyBetweenUserAndDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveManyToManyBetweenUserAndDepartment.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.ManyToManyBetweenUserAndDepartment2.resources

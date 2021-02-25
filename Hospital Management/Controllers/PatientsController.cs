@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Hospital_Management.Models;
 using Hospital_Management.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace Hospital_Management.Controllers
 {
@@ -60,7 +61,10 @@ namespace Hospital_Management.Controllers
         }
         public ActionResult ResultDetails(int? id)
         {
-
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             var patient = _context.Patients.SingleOrDefault(p => p.Id == id);
             if (patient == null)
                 return RedirectToAction("Index", "Home");
@@ -76,9 +80,13 @@ namespace Hospital_Management.Controllers
         
        
         // GET: Patients/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            var patient = _context.Patients.Single(p => p.Id == id);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var patient = _context.Patients.SingleOrDefault(p => p.Id == id);
             if (patient == null)
                 return HttpNotFound();
             return View(patient);
@@ -94,7 +102,7 @@ namespace Hospital_Management.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var patient = _context.Patients.Single(p => p.Id == id);
+            var patient = _context.Patients.SingleOrDefault(p => p.Id == id);
             if (patient == null)
                 return HttpNotFound();
             var viewModel=new RegisterPatientViewModel{Patient = patient,Departments = _context.Departments.ToList()};
@@ -139,7 +147,7 @@ namespace Hospital_Management.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var patient = _context.Patients.Single(p => p.Id == id);
+            var patient = _context.Patients.SingleOrDefault(p => p.Id == id);
             if (patient == null)
                 return HttpNotFound();
             var viewModel = new RegisterPatientViewModel { Patient = patient, 
@@ -156,7 +164,7 @@ namespace Hospital_Management.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var patientInDb = _context.Patients.Single(p=>p.Id==id);
+            var patientInDb = _context.Patients.SingleOrDefault(p=>p.Id==id);
             try
             {
                 if (patientInDb == null)

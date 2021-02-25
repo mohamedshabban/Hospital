@@ -2,5 +2,9 @@
 @{
     ViewBag.Title = "GetResult";
 }
+@using Microsoft.AspNet.Identity
 @model Hospital_Management.Models.Patient
-@Model.Result
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home", "", new { @class = "btn btn-primary" })
+</div>

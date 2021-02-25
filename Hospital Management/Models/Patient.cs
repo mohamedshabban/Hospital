@@ -28,9 +28,11 @@ namespace Hospital_Management.Models
         public Department Department { get; set; }
         public byte DepartmentId { get; set; }
 
-        public Treatment Treatment { get; set; }
         public int? TreatmentId { get; set; }
         public string Result { get; set; }
-        
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
     }
 }

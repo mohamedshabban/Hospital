@@ -7,7 +7,7 @@ using Hospital_Management.Models;
 
 namespace Hospital_Management.Controllers
 {
-    [Authorize(Roles = "Patients,Doctors")]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -17,22 +17,8 @@ namespace Hospital_Management.Controllers
         }
         public ActionResult Index()
         {
-
             return View(_context.Departments.ToList());
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

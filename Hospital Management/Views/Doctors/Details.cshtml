@@ -1,26 +1,33 @@
-﻿@model Hospital_Management.Models.Doctor
+﻿@model Hospital_Management.ViewModels.ListDoctorsViewModel
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Details about @Model.Doctor.Name</h2>
+<div>
+    <hr />
+    <div class="form-horizontal">
+      
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Doctor.Name)
+            @Html.EditorFor(model => model.Doctor.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Doctor.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Doctor.DepartmentId)
+            @Html.DropDownListFor(c => c.Doctor.DepartmentId, new SelectList(Model.Departments, "Id", "Name"), "Select Department", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Doctor.DepartmentId)
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit","Doctors", new { id = Model.Doctor.Id },
+            new {@class="btn btn-default"})
+    </p>
+</div>
 
 <div>
-    <h4>Doctor</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-    </dl>
+    @Html.ActionLink("Back to List", "Index", "Doctors", "", new { @class = "btn btn-primary" })
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

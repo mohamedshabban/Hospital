@@ -34,13 +34,13 @@ namespace Hospital_Management
             //}
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             var user = new ApplicationUser();
-            user.Email = "patient@gmail.com";
-            user.UserName = "patient";
+            user.Email = "admin@gmail.com";
+            user.UserName = "admin";
             var check = userManager.Create(user, "01143511772@Kr");
 
             if (check.Succeeded)
             {
-                userManager.AddToRole(user.Id, "Patients");
+                userManager.AddToRole(user.Id, "Admins");
             }
         }
         public void CreateRoles()
@@ -58,7 +58,11 @@ namespace Hospital_Management
                 role = new IdentityRole { Name = "Patients" };
                 roleManager.Create(role);
             }
-           
+            if (!roleManager.RoleExists("Admins"))
+            {
+                role = new IdentityRole { Name = "Admins" };
+                roleManager.Create(role);
+            }
         }
     }
 }

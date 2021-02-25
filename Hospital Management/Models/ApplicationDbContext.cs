@@ -9,8 +9,7 @@ namespace Hospital_Management.Models
         public DbSet<Department> Departments { get; set; }
         
         public DbSet<Patient> Patients { get; set; }
-        public DbSet<Treatment> Treatments { get; set; }
-       
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

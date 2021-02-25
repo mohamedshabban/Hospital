@@ -1,13 +1,29 @@
-﻿@model IEnumerable<Hospital_Management.Models.Department>
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<Hospital_Management.Models.Department>
 @{
     ViewBag.Title = "Index";
 }
+<br/>
+<br/>
 
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Admins"))
+    {
+        <li>@Html.ActionLink("Create New Department", "Create", "Departments")</li>
+    }
+}
+@if (!@Model.Any())
+{
+    <p>there are no Departments</p>
+}
+else{
 <div class="row">
 
     @foreach (var dept in Model)
     {
-        @Html.Partial("_DepartmentCard",dept);
+        @Html.Partial("_DepartmentCard", dept);
     }
 
 </div>
+}

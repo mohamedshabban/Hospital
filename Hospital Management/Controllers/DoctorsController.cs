@@ -25,29 +25,42 @@ namespace Hospital_Management.Controllers
         }
 
         // GET: Doctors/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            var doctor=_context.Doctors.Single(d => d.Id == id);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var doctor=_context.Doctors.SingleOrDefault(d => d.Id == id);
+            var departments = _context.Departments.ToList();
+            var viewModel=new ListDoctorsViewModel{Doctor = doctor,Departments = departments};
             if (doctor == null)
                 return HttpNotFound();
-            return View(doctor);
+            return View(viewModel);
         }
 
-       
 
+        public ActionResult Create()
+        {
+            var departments = _context.Departments.ToList();
+            
+            return View(new ListDoctorsViewModel { Departments = departments });
+        }
         // POST: Doctors/Create
         [HttpPost]
         public ActionResult Create(Doctor doctor)
         {
-            var doctorCreate = new DoctorCreate {Doctor = doctor, Departments = _context.Departments.ToList()};
-           
-                if (ModelState.IsValid)
-                {
-                    _context.Doctors.Add(doctor);
-                    _context.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                return View(doctorCreate);
+            var viewModel = new ListDoctorsViewModel
+            {
+                Departments = _context.Departments.ToList()
+            };
+            if (ModelState.IsValid)
+            {
+                _context.Doctors.Add(doctor);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(viewModel);
           
         }
 
@@ -58,7 +71,7 @@ namespace Hospital_Management.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var doctorInDb = _context.Doctors.Single(d => d.Id == id);
+            var doctorInDb = _context.Doctors.SingleOrDefault(d => d.Id == id);
             var viewModel = new DoctorCreate
             {
                 Doctor = doctorInDb, Departments = _context.Departments.ToList()
@@ -74,7 +87,7 @@ namespace Hospital_Management.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var doctorInDb = _context.Doctors.Single(d => d.Id == id);
+            var doctorInDb = _context.Doctors.SingleOrDefault(d => d.Id == id);
             if (doctorInDb == null)
                 return HttpNotFound();
             if (ModelState.IsValid)
@@ -97,7 +110,8 @@ namespace Hospital_Management.Controllers
         // GET: Doctors/Delete/5
         public ActionResult Delete(int id)
         {
-            var doctorInDb = _context.Doctors.Single(d => d.Id == id);
+
+            var doctorInDb = _context.Doctors.SingleOrDefault(d => d.Id == id);
             if (doctorInDb == null)
                 return HttpNotFound();
             var viewModel=new DoctorCreate{Doctor = doctorInDb,Departments = _context.Departments.ToList() };
@@ -108,7 +122,7 @@ namespace Hospital_Management.Controllers
         [HttpPost]
         public ActionResult Delete(int id, Doctor doctor)
         {
-            var doctorInDb = _context.Doctors.Single(d => d.Id == id);
+            var doctorInDb = _context.Doctors.SingleOrDefault(d => d.Id == id);
             if (doctorInDb == null)
                 return HttpNotFound();
             var viewModel = new DoctorCreate { Doctor = doctorInDb, Departments = _context.Departments.ToList() };
