@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body style="">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,10 +26,17 @@
 
                     @if (User.Identity.IsAuthenticated)
                     {
-                        if (User.IsInRole("Doctors"))
+                        if (User.IsInRole("Admins"))
                         {
                             <li>@Html.ActionLink("Patients", "Index", "Patients")</li>
                             <li>@Html.ActionLink("Doctors", "Index", "Doctors")</li>
+                        }
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Doctors"))
+                        {
+                            <li>@Html.ActionLink("Patients", "Index", "Patients")</li>
                         }
                     }
                     @if (User.Identity.IsAuthenticated)
@@ -37,8 +45,8 @@
                         {
                             <li>@Html.ActionLink("Patients Registeration", "Register", "Patients")</li>
 
-                            <li>@Html.ActionLink("Get your result", "Result", "Patients")</li>
-                            <li>@Html.ActionLink("Profile", "Profile", "Patients")</li>
+                            <li>@Html.ActionLink("Get your result", "Result", 
+                                    "Patients",null,new {id=User.Identity.GetUserId()})</li>
                         }
                     }
                    

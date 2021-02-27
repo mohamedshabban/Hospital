@@ -9,7 +9,7 @@ using Hospital_Management.ViewModels;
 
 namespace Hospital_Management.Controllers
 {
-    [Authorize(Roles = "Doctors")]
+    [Authorize(Roles = "Admins")]
     public class DoctorsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -40,29 +40,29 @@ namespace Hospital_Management.Controllers
         }
 
 
-        public ActionResult Create()
-        {
-            var departments = _context.Departments.ToList();
+        //public ActionResult Create()
+        //{
+        //    var departments = _context.Departments.ToList();
             
-            return View(new ListDoctorsViewModel { Departments = departments });
-        }
-        // POST: Doctors/Create
-        [HttpPost]
-        public ActionResult Create(Doctor doctor)
-        {
-            var viewModel = new ListDoctorsViewModel
-            {
-                Departments = _context.Departments.ToList()
-            };
-            if (ModelState.IsValid)
-            {
-                _context.Doctors.Add(doctor);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(viewModel);
+        //    return View(new ListDoctorsViewModel { Departments = departments });
+        //}
+        //// POST: Doctors/Create
+        //[HttpPost]
+        //public ActionResult Create(Doctor doctor)
+        //{
+        //    var viewModel = new ListDoctorsViewModel
+        //    {
+        //        Departments = _context.Departments.ToList()
+        //    };
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Doctors.Add(doctor);
+        //        _context.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(viewModel);
           
-        }
+        //}
 
         // GET: Doctors/Edit/5
         public ActionResult Edit(int? id)
@@ -128,8 +128,6 @@ namespace Hospital_Management.Controllers
             var viewModel = new DoctorCreate { Doctor = doctorInDb, Departments = _context.Departments.ToList() };
             try
             {
-                if (doctorInDb == null)
-                    return HttpNotFound();
                 _context.Doctors.Remove(doctorInDb);
                 _context.SaveChanges();
                 return RedirectToAction("Index");

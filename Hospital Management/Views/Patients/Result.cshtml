@@ -3,9 +3,20 @@
     ViewBag.Title = "Result";
 }
 @model Hospital_Management.Models.Patient
-
-<p>Enter Your ID</p>
-@using(Html.BeginForm("ResultDetails", "Patients", FormMethod.Get)) {
-    @Html.TextBox("id")
-    <input type = "submit" value="Search"/>
+<br/>
+<br/>
+<br/>
+@if (Model == null)
+{
+    <h3><strong>You must fill registeration form first..</strong></h3>
+}
+else{
+    if(Model.Result == null)
+    {
+    <h5><strong>there is no result </strong > </h5>
+    }
+    else
+    {
+    <h5><strong>@Model.Result</strong></h5>
+    }
 }

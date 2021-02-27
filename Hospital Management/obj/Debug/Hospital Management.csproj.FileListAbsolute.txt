@@ -102,3 +102,4 @@ C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospi
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.ManyToManyBetweenUserAndDepartment.resources
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.RemoveManyToManyBetweenUserAndDepartment.resources
 C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.ManyToManyBetweenUserAndDepartment2.resources
+C:\Users\Kranshy\Desktop\Hospital Management\Hospital Management\obj\Debug\Hospital_Management.Migrations.UserIdToDoctor.resources

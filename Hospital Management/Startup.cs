@@ -17,26 +17,37 @@ namespace Hospital_Management
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            //CreateRoles();
-            //CreateUsers();
+           //CreateRoles();
+           CreateUsers();
         }
         public void CreateUsers()
         {
-            //var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            //var user = new ApplicationUser();
-            //user.Email = "doctor@gmail.com";
-            //user.UserName = "doctor";
-            //var check = userManager.Create(user, "01143511772@Kr");
-
-            //if (check.Succeeded)
-            //{
-            //    userManager.AddToRole(user.Id, "Doctors");
-            //}
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            var user = new ApplicationUser();
-            user.Email = "admin@gmail.com";
-            user.UserName = "admin";
+            var user = new ApplicationUser
+            {
+                Email = "doctor@gmail.com",
+                UserName = "doctor"
+            };
             var check = userManager.Create(user, "01143511772@Kr");
+            
+            if (check.Succeeded)
+            {
+                userManager.AddToRole(user.Id, "Doctors");
+                context.Doctors.Add(
+                    new Doctor {
+                        DepartmentId = 1, 
+                        Name = user.UserName, 
+                        UserId = user.Id});
+                context.SaveChanges();
+            }
+            ///////////////////////////////////////////////////
+            userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            user = new ApplicationUser
+            {
+                Email = "admin@gmail.com",
+                UserName = "admin"
+            };
+            check = userManager.Create(user, "01143511772@Kr");
 
             if (check.Succeeded)
             {

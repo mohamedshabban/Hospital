@@ -23,38 +23,4 @@ select,
 textarea {
     max-width: 280px;
 }
-.Box {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    transform: translate(-50%, -50%);
 
-    padding: 20px;
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    display: flex;
-}
-.Box .ImgBx {
-    width: 150px;
-    flex: 0 0 150px;
-}
-.Box .ImgBx img {
-    max-width: 100%;
-}
-.Box .content {
-    padding-left: 20px;
-}
-.Box .content h4 {
-    margin: 0;
-    margin-left: 0;
-    color: #ff005c;
-    font-size: 22px;
-}
-
-.Box .content p {
-    margin: 0;
-    padding: 10px 0 0;
-    text-align: justify;
-}

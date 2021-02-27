@@ -11,7 +11,7 @@ namespace Hospital_Management.Migrations
                 "dbo.Departments",
                 c => new
                     {
-                        Id = c.Byte(nullable: false),
+                        Id = c.Byte(nullable: false, identity: true),
                         Name = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);

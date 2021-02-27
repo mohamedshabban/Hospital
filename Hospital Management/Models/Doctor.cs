@@ -19,7 +19,11 @@ namespace Hospital_Management.Models
         //f.k
         [Display(Name = "Department")]
         public byte DepartmentId { get; set; }
-       
+
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
 
     }
 }

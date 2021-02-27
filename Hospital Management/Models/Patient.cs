@@ -24,8 +24,9 @@ namespace Hospital_Management.Models
         [DataType(DataType.PhoneNumber)]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Mobile { get; set; }
-       
         public Department Department { get; set; }
+        [Required]
+        [Display(Name = "Department")]
         public byte DepartmentId { get; set; }
 
         public int? TreatmentId { get; set; }

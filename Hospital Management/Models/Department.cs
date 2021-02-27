@@ -6,6 +6,7 @@ namespace Hospital_Management.Models
 {
     public class Department
     {
+        [Key]
         [Display(Name = "Department" )]
         public byte Id { get; set; }
         [Required]
@@ -28,5 +29,6 @@ namespace Hospital_Management.Models
         {
             ApplicationUser = new HashSet<ApplicationUser>();
         }
+
     }
 }

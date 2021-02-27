@@ -39,6 +39,7 @@ namespace Hospital_Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                patient.UserId = User.Identity.GetUserId();
                 _context.Patients.Add(patient);
                 _context.SaveChanges();
                 var patientInDb = _context.Patients.OrderByDescending(p => p.Id)
@@ -55,27 +56,36 @@ namespace Hospital_Management.Controllers
                 return HttpNotFound();
             return View(patientInDb);
         }
+        [Authorize(Roles = "Patients")]
         public ActionResult Result()
         {
-            return View();
-        }
-        public ActionResult ResultDetails(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var patient = _context.Patients.SingleOrDefault(p => p.Id == id);
+            var userId = User.Identity.GetUserId();
+            var patient = _context.Patients.SingleOrDefault(u => u.UserId == userId);
             if (patient == null)
-                return RedirectToAction("Index", "Home");
+                return View();
             return View(patient);
         }
         // GET: Patients
-        [Authorize(Roles = "Doctors")]
+        [Authorize(Roles = "Admins,Doctors")]
         public ActionResult Index()
         {
-            var patients = _context.Patients.ToList();
-            return View(patients);
+            if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Doctors"))
+                {
+                    //var userId = User.Identity.GetUserId();
+                    //var doctor = _context.Doctors.Single(c=>c.);
+                    var patients = _context.Patients.ToList();
+                    return View(patients);
+                }
+                if (User.IsInRole("Admins"))
+                {
+                    var patients = _context.Patients.ToList();
+                    return View(patients);
+                }
+            }
+            
+            return View();
         }
         
        
@@ -95,7 +105,7 @@ namespace Hospital_Management.Controllers
 
 
         // GET: Patients/Edit/5
-        [Authorize(Roles = "Doctors")]
+        [Authorize(Roles = "Admins,Doctors")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -111,7 +121,7 @@ namespace Hospital_Management.Controllers
 
         // POST: Patients/Edit/5
         [HttpPost]
-        [Authorize(Roles = "Doctors")]
+        [Authorize(Roles = "Admins,Doctors")]
         public ActionResult Edit(int? id, Patient patient)
         {
             if (id == null)
@@ -140,7 +150,7 @@ namespace Hospital_Management.Controllers
         }
 
         // GET: Patients/Delete/5
-        [Authorize(Roles = "Doctors")]
+        [Authorize(Roles = "Admins,Doctors")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -157,7 +167,7 @@ namespace Hospital_Management.Controllers
 
         // POST: Patients/Delete/5
         [HttpPost]
-        [Authorize(Roles = "Doctors")]
+        [Authorize(Roles = "Admins,Doctors")]
         public ActionResult Delete(int? id,Patient patient)
         {
             if (id == null)
